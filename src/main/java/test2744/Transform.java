@@ -12,6 +12,19 @@ public class Transform {
         String regex = "[a-zA-Z]{1,100}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(word);
+        if (!matcher.matches()) {
+            return;
+        }
 
+        StringBuilder sb = new StringBuilder();
+        char[] chars = word.toCharArray();
+        for (char c : chars) {
+            if (Character.isUpperCase(c)) {
+                sb.append(Character.toLowerCase(c));
+            } else {
+                sb.append(Character.toUpperCase(c));
+            }
+        }
+        System.out.println(sb);
     }
 }
