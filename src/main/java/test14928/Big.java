@@ -7,7 +7,7 @@ public class Big {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     String bigStr = sc.nextLine();
-
+    // 모듈러 산술
     // 문자열 길이가 1,000,000보다 크면 바로 종료
     if (bigStr.length() > 1000000) return;
 
