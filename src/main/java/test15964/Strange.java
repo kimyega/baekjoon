@@ -9,10 +9,9 @@ public class Strange {
     int a = sc.nextInt();
     int b = sc.nextInt();
 
-    if (1 <= a && a <= 1000 && 1 <= b && b <= 1000) {
-      System.out.println((a + b) * (a - b));
-    }
+    if (a < 1 || a > 1000 || b < 1 || b > 1000) return;
 
-    sc.close();
+    System.out.println((a + b) * (a - b));
+
   }
 }
