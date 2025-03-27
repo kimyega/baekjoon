@@ -18,3 +18,4 @@ public class Rats {
         System.out.println(result);
     }
 }
+
