@@ -23,3 +23,15 @@ public class Math {
         System.out.println(x);
     }
 }
+
+//        Scanner sc = new Scanner(System.in);
+//        BigInteger a = sc.nextBigInteger();
+//        BigInteger b = sc.nextBigInteger();
+//        BigInteger c = sc.nextBigInteger();
+//
+//
+//        BigInteger subtracts = b.subtract(c);
+//
+//        System.out.println(subtracts.divide(a));
+//    }
+//}
