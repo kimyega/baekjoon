@@ -1,7 +1,7 @@
 package test29863;
 
 import java.time.Duration;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class SleepSchedule {
@@ -9,11 +9,12 @@ public class SleepSchedule {
         Scanner sc = new Scanner(System.in);
         int sleepHour = sc.nextInt();
         int alarmHour = sc.nextInt();
+        if ((sleepHour < 20 || sleepHour > 23) && (sleepHour < 0 || sleepHour > 3) || alarmHour < 5 || alarmHour > 10) return;
 
-        LocalTime sleepTime = LocalTime.of(sleepHour, 0);
-        LocalTime alarmTime = LocalTime.of(alarmHour, 0);
-        if (sleepHour >= 20) {
-            alarmTime = alarmTime.plusHours(24);
+        LocalDateTime sleepTime = LocalDateTime.now().withHour(sleepHour).withMinute(0).withSecond(0);
+        LocalDateTime alarmTime = sleepTime.plusDays(1).withHour(alarmHour).withMinute(0).withSecond(0);
+        if (sleepHour <= 3) {
+            sleepTime = sleepTime.plusDays(1);
         }
 
         Duration duration = Duration.between(sleepTime, alarmTime);
