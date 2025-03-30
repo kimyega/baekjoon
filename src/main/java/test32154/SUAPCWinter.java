@@ -1,6 +1,5 @@
 package test32154;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class SUAPCWinter {
@@ -21,19 +20,29 @@ public class SUAPCWinter {
     };
     if (rank == 10) {
       System.out.println(rankByProblems[4].length);
-      System.out.println(Arrays.asList(rankByProblems[4]));
+      for (String problem : rankByProblems[4]) {
+        System.out.print(problem + " ");
+      }
     } else if (rank > 4) {
       System.out.println(rankByProblems[3].length);
-      System.out.println(Arrays.asList(rankByProblems[3]));
-    } else if (rank == 3) {
+      for (String problem : rankByProblems[3]) {
+        System.out.print(problem + " ");
+      }
+    } else if (rank == 4) {
       System.out.println(rankByProblems[2].length);
-      System.out.println(Arrays.asList(rankByProblems[2]));
+      for (String problem : rankByProblems[2]) {
+        System.out.print(problem + " ");
+      }
     } else if (rank > 1) {
       System.out.println(rankByProblems[1].length);
-      System.out.println(Arrays.asList(rankByProblems[1]));
+      for (String problem : rankByProblems[1]) {
+        System.out.print(problem + " ");
+      }
     } else {
-      System.out.println(rankByProblems[1].length);
-      System.out.println(Arrays.asList(rankByProblems[1]));
+      System.out.println(rankByProblems[0].length);
+      for (String problem : rankByProblems[0]) {
+        System.out.print(problem + " ");
+      }
     }
   }
 }
