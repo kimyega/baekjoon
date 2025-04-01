@@ -13,6 +13,6 @@ public class PigelCup {
         LocalDate nthDate = firstDate.plusMonths(nth * 7 );
         int year = nthDate.getYear();
         int month = nthDate.getMonthValue();
-        System.out.println(year + " " + month);
+    System.out.println(year + " " + month);
     }
 }
