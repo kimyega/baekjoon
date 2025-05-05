@@ -1,26 +1,18 @@
-package test31281;
+package test28519;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class GoldenMiddle {
+public class DimensionTravel {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    long sum = 0, max = Long.MIN_VALUE, min = Long.MAX_VALUE;
-
     StringTokenizer st = new StringTokenizer(br.readLine());
+    int x = Integer.parseInt(st.nextToken());
+    int y = Integer.parseInt(st.nextToken());
 
-    while (st.hasMoreTokens()) {
-      long n = Long.parseLong(st.nextToken());
-
-      sum += n;
-      max = Math.max(max, n);
-      min = Math.min(min, n);
-    }
-
-    long middle = sum - (max + min);
-    bw.write(middle + "");
+    int total = x == y ? x * 2 : Math.min(x, y) * 2 + 1;
+    bw.write(total + "");
 
     bw.flush();
     bw.close();

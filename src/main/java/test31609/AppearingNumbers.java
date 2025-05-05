@@ -1,26 +1,32 @@
-package test31281;
+package test31609;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class GoldenMiddle {
+public class AppearingNumbers {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    long sum = 0, max = Long.MIN_VALUE, min = Long.MAX_VALUE;
+    int n = Integer.parseInt(br.readLine());
 
+    boolean[] appeared = new boolean[10];
     StringTokenizer st = new StringTokenizer(br.readLine());
 
     while (st.hasMoreTokens()) {
-      long n = Long.parseLong(st.nextToken());
-
-      sum += n;
-      max = Math.max(max, n);
-      min = Math.min(min, n);
+      int a = Integer.parseInt(st.nextToken());
+      appeared[a] = true;
     }
 
-    long middle = sum - (max + min);
-    bw.write(middle + "");
+    StringBuilder sb = new StringBuilder();
+
+    for (int i = 0; i < 10; i++) {
+      if (appeared[i]) {
+        sb.append(i + "\n");
+      }
+    }
+
+    sb.deleteCharAt(sb.length() - 1);
+    bw.write(sb.toString());
 
     bw.flush();
     bw.close();

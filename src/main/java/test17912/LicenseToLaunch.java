@@ -1,26 +1,27 @@
-package test31281;
+package test17912;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class GoldenMiddle {
+public class LicenseToLaunch {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    long sum = 0, max = Long.MIN_VALUE, min = Long.MAX_VALUE;
+    int min = Integer.MAX_VALUE, idx = 0;
+    int n = Integer.parseInt(br.readLine());
 
     StringTokenizer st = new StringTokenizer(br.readLine());
 
-    while (st.hasMoreTokens()) {
-      long n = Long.parseLong(st.nextToken());
+    for (int i = 0; i < n; i++) {
+      int j = Integer.parseInt(st.nextToken());
 
-      sum += n;
-      max = Math.max(max, n);
-      min = Math.min(min, n);
+      if (j < min) {
+        idx = i;
+        min = j;
+      }
     }
 
-    long middle = sum - (max + min);
-    bw.write(middle + "");
+    bw.write(idx + "");
 
     bw.flush();
     bw.close();
