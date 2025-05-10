@@ -1,22 +1,21 @@
-package test32776;
+package test1085;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class TimeWallBreaker {
+public class EscapeRectangle {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    int flight = 0;
-    int rail = Integer.parseInt(br.readLine());
 
     StringTokenizer st = new StringTokenizer(br.readLine());
-    while (st.hasMoreTokens()) {
-      flight += Integer.parseInt(st.nextToken());
-    }
+    int x = Integer.parseInt(st.nextToken());
+    int y = Integer.parseInt(st.nextToken());
+    int w = Integer.parseInt(st.nextToken());
+    int h = Integer.parseInt(st.nextToken());
 
-    String s = rail <= flight || rail <= 240? "high speed rail" : "flight";
-    bw.write(s);
+    int min = Math.min(Math.min(x, w - x), Math.min(y, h - y));
+    bw.write(min + "");
 
     bw.flush();
     bw.close();
