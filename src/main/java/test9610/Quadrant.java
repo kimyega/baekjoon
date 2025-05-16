@@ -1,8 +1,9 @@
 package test9610;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.StringJoiner;
 import java.util.StringTokenizer;
 
 public class Quadrant {
@@ -13,12 +14,12 @@ public class Quadrant {
         StringTokenizer st;
         int caseNo = Integer.parseInt(br.readLine());
 
-        Map<String, Integer> qdnts = new HashMap<>();
-        qdnts.put("AXIS", 0);
+        Map<String, Integer> qdnts = new LinkedHashMap<>();
         qdnts.put("Q1", 0);
         qdnts.put("Q2", 0);
         qdnts.put("Q3", 0);
         qdnts.put("Q4", 0);
+        qdnts.put("AXIS", 0);
 
         while (caseNo-- > 0) {
             String qdntStr = "";
@@ -42,14 +43,9 @@ public class Quadrant {
             qdnts.put(qdntStr, qdnts.get(qdntStr) + 1);
         }
 
-        StringBuilder sb = new StringBuilder();
-
-        for (Map.Entry<String, Integer> entry : qdnts.entrySet()) {
-            sb.append(entry.getKey() + ": " + entry.getValue() + "\n");
-        }
-
-        sb.deleteCharAt(sb.length() - 1);
-        bw.write(sb.toString());
+        StringJoiner sj = new StringJoiner("\n");
+        qdnts.forEach((k, v) -> sj.add(k + ": " + v));
+        bw.write(sj.toString());
 
         bw.flush();
         bw.close();
