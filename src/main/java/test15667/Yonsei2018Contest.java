@@ -8,7 +8,7 @@ public class Yonsei2018Contest {
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     int n = Integer.parseInt(br.readLine());
-    int start = (int) Math.sqrt(n) + 1;
+    int start = (int) Math.sqrt(n);
     int k = 0;
 
     for (int i = start; i < n; i++) {
