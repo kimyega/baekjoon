@@ -10,16 +10,10 @@ public class Gugudan {
         boolean isGugudan = false;
 
         for (int i = 2; i <= 9; i++) {
-            if (n % i == 0 && n / i < 10 || n == 1) {
-                isGugudan = true;
-            }
+            if (n % i == 0 && n / i < 10 || n == 1) isGugudan = true;
         }
 
-        if (isGugudan) {
-            bw.write("1");
-        } else {
-            bw.write("0");
-        }
+        bw.write(isGugudan ? "1" : "0");
 
         bw.flush();
         bw.close();
