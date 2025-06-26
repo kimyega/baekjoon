@@ -24,7 +24,7 @@ public class AlwaysFollowTheRulesInZombieland {
         for (int i = 0; i < m; i++) {
             String rule = "";
             int ruleNo = Integer.parseInt(br.readLine());
-            if (ruleNo < 0 || ruleNo > rules.size()) rule = "No such rule";
+            if (ruleNo <= 0 || ruleNo > rules.size()) rule = "No such rule";
             else rule = rules.get(ruleNo - 1);
 
             sb.append("Rule ").append(ruleNo).append(": ").append(rule).append("\n");
