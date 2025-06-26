@@ -12,7 +12,21 @@ public class JavaScript {
         String a = st.nextToken();
         String b = st.nextToken();
 
+        bw.write(javaScriptCalc(a, b));
 
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+    static String javaScriptCalc (String a, String b) {
+        if (isNan(a) || isNan(b)) return "NaN";
+        return Integer.parseInt(a) - Integer.parseInt(b) + "";
+    }
 
+    static boolean isNan (String str) {
+        for (char c : str.toCharArray()) {
+            if (!Character.isDigit(c)) return true;
+        }
+        return false;
     }
 }
