@@ -41,6 +41,9 @@ public class ImsDailyQuest {
             new Quest(235, 245, 250)  // 태초의 바다 에스페라
     );
 
+
+
+
     List<Quest> grandis = Arrays.asList(
             new Quest(260, 265, 270), // 세르니움
             new Quest(265, 270, 275), // 호텔 아르크스
