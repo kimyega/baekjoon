@@ -12,6 +12,7 @@ public class SAHURIMSA {
 
     int caseNo = Integer.parseInt(br.readLine());
 
+
     for (int i = 1; i <= caseNo; i++) {
       st = new StringTokenizer(br.readLine());
       int h = Integer.parseInt(st.nextToken());
