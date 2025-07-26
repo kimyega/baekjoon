@@ -14,6 +14,8 @@ public class BearLikesHoney {
 
     int caseNo = Integer.parseInt(br.readLine());
 
+
+
     for (int i = 1; i <= caseNo; i++) {
       double bws = 0;
 
