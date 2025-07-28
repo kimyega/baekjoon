@@ -12,6 +12,8 @@ public class NewFinancialYear {
 
     int caseNo = Integer.parseInt(br.readLine());
 
+
+
     while (caseNo-- > 0) {
       st = new StringTokenizer(br.readLine());
       double p = Double.parseDouble(st.nextToken());

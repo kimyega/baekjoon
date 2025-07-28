@@ -13,6 +13,7 @@ public class FarmRobot {
     int c = Integer.parseInt(st.nextToken());
     int s = Integer.parseInt(st.nextToken());
 
+
     int currNo = 1, result = 0;
     if (currNo == s) result++;
 
