@@ -13,7 +13,7 @@ public class IDKey {
 
     while (n-- > 0) {
       String s = br.readLine();
-      sb.append(makeIdKey(s).substring(1)).append("\n");
+      sb.append(makeIdKey(s)).append("\n");
     }
 
     bw.write(sb.toString());
@@ -22,7 +22,7 @@ public class IDKey {
     br.close();
   }
 
-  static String makeIdKey(String s) {
+  static int makeIdKey(String s) {
     int sum = 0;
     for (char c : s.toCharArray()) {
       sum += c - '0';
@@ -31,6 +31,6 @@ public class IDKey {
     int last = Integer.parseInt(s.substring(s.length() - 3));
     sum += last * 10;
 
-    return sum / 10000 == 0 ? sum + 10000 + "" : sum % 100000 + "";
+    return sum / 10000 == 0 ? sum + 10000 : sum % 100000;
   }
 }
