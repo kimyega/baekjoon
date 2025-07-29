@@ -7,30 +7,33 @@ public class IDKey {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    int n = Integer.parseInt(br.readLine());
+    int T = Integer.parseInt(br.readLine());
 
-    StringBuilder sb = new StringBuilder();
-
-    while (n-- > 0) {
+    while (T-- > 0) {
       String s = br.readLine();
-      sb.append(makeIdKey(s)).append("\n");
+      long N = Long.parseLong(s);
+
+      // 마지막 3자리 * 10
+      long val = (N % 1000) * 10;
+
+      // 13자리 숫자의 각 자리 더하기
+      for (char c : s.toCharArray()) {
+        val += c - '0';
+      }
+
+      if (val > 9999) {
+        val %= 10000;  // 뒤 4자리만 남김
+      } else if (val < 1000) {
+        val += 1000;
+      }
+
+      // 4자리 숫자 앞에 0 붙여 출력
+      String output = String.format("%04d", val);
+      bw.write(output + "\n");
     }
 
-    bw.write(sb.toString());
     bw.flush();
     bw.close();
     br.close();
-  }
-
-  static int makeIdKey(String s) {
-    int sum = 0;
-    for (char c : s.toCharArray()) {
-      sum += c - '0';
-    }
-
-    int last = Integer.parseInt(s.substring(s.length() - 3));
-    sum += last * 10;
-
-    return sum / 10000 == 0 ? sum + 10000 : sum % 100000;
   }
 }
