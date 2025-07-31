@@ -27,6 +27,8 @@ public class IDKey {
         val += 1000;
       }
 
+
+
       // 4자리 숫자 앞에 0 붙여 출력
       String output = String.format("%04d", val);
       bw.write(output + "\n");
