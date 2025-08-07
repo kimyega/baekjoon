@@ -17,8 +17,6 @@ public class LumiTruePurpleFinder {
     int slo = Integer.parseInt(st.nextToken());
     int shi = Integer.parseInt(st.nextToken());
 
-
-
     st = new StringTokenizer(br.readLine());
     int vlo = Integer.parseInt(st.nextToken());
     int vhi = Integer.parseInt(st.nextToken());
