@@ -40,6 +40,8 @@ public class LumiTruePurpleFinder {
 
     if (H < 0) H += 360.0;
 
+
+
     bw.write(H >= hlo && H <= hhi && S >= slo && S <= shi && V >= vlo && V <= vhi ? "Lumi will like it." : "Lumi will not like it.");
 
     bw.flush();
