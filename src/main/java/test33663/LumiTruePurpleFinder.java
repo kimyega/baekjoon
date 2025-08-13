@@ -26,6 +26,8 @@ public class LumiTruePurpleFinder {
     int G = Integer.parseInt(st.nextToken());
     int B = Integer.parseInt(st.nextToken());
 
+
+
     int M = Math.max(Math.max(R, G), B);
     int m = Math.min(Math.min(R, G), B);
 
@@ -39,8 +41,6 @@ public class LumiTruePurpleFinder {
     else H = 240.0 + 60.0 * (R - G) / (M - m);
 
     if (H < 0) H += 360.0;
-
-
 
     bw.write(H >= hlo && H <= hhi && S >= slo && S <= shi && V >= vlo && V <= vhi ? "Lumi will like it." : "Lumi will not like it.");
 
