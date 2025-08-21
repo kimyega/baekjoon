@@ -18,8 +18,8 @@ public class ConferenceApplication {
             boolean publicFound = Arrays.stream(publicKeywords).anyMatch(title::contains);
             return digitalFound ? "digital humanities" : publicFound ? "public bigdata" : "";
         }
-
     }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
