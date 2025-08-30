@@ -17,6 +17,7 @@ public class PascalLibrary {
       int d = Integer.parseInt(st.nextToken());
       if (n == 0 && d == 0) break;
 
+
       int[] arr = new int[n];
       boolean flag = false;
 
