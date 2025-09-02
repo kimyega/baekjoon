@@ -15,6 +15,8 @@ public class SnacksWithin300Yen {
             int n = Integer.parseInt(br.readLine());
             if (n == 0) break;
 
+
+
             st = new StringTokenizer(br.readLine());
             while (st.hasMoreTokens()) {
                 int snack = Integer.parseInt(st.nextToken());
