@@ -28,6 +28,7 @@ public class PascalLibrary {
         }
       }
 
+
       for (int i = 0; i < n; i++) {
         if (arr[i] == d) flag = true;
       }
