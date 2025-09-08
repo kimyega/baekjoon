@@ -8,15 +8,23 @@ public class AndThenThereWas5 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-        double PI = Math.PI;
+        StringBuilder sb = new StringBuilder();
 
-        int n = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
 
-        while (n-- > 0) {
+        while (N-- > 0) {
             st = new StringTokenizer(br.readLine());
-            int p = Integer.parseInt(st.nextToken());
-            int r = Integer.parseInt(st.nextToken());
+            int P = Integer.parseInt(st.nextToken());
+            int D = Integer.parseInt(st.nextToken());
 
+            sb.append(D + " 5\n");
         }
+
+        bw.write(sb.toString());
+
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
+
