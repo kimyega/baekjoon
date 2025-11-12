@@ -17,6 +17,7 @@ public class SecretLocation {
     String line = "";
     int cnt = 0;
 
+
     while ((line = br.readLine()) != null) {
       cnt++;
       sj.add(line.trim().length() + "");
