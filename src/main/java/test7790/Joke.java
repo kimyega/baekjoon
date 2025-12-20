@@ -21,7 +21,6 @@ public class Joke {
       sb.append(line).append("\n");
     }
 
-
     m = p.matcher(sb.toString());
 
     while (m.find()) count++;
