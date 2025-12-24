@@ -39,8 +39,6 @@ public class NЗРАЗ {
       }
     }
 
-
-
     bw.write(max + "");
 
     bw.flush();
@@ -48,7 +46,6 @@ public class NЗРАЗ {
     bw.close();
 
   }
-
 
   static long calc(long a, long b, char op) {
     if (op == '+') return a + b;
