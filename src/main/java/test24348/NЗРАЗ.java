@@ -29,9 +29,7 @@ public class NЗРАЗ {
           for (int x = 0; x < 3; x++) {
             for (int y = 0; y < 3; y++) {
               if (y == x) continue;
-
               long val = eval(nums[i], nums[j], nums[k], ops[x], ops[y]);
-
               max = Math.max(max, val);
             }
           }
