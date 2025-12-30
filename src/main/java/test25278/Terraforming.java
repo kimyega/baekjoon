@@ -28,6 +28,7 @@ public class Terraforming {
       }
     }
 
+
     public String isLiveable() {
       return this.ocean >= 9 && this.oxygen >= 14 && this.temperature >= 8 ? "liveable" : "not liveable";
     }
