@@ -25,7 +25,6 @@ public class Chess {
                 result = 8 - partInt;
             }
             resultString += result + " ";
-
         }
         System.out.println(resultString);
     }
