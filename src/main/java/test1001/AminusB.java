@@ -9,5 +9,6 @@ public class AminusB {
     int b = sc.nextInt();
     int minus = a - b;
     System.out.println(minus);
+
   }
 }
