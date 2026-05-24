@@ -8,6 +8,7 @@ public class AminusB {
     int a = sc.nextInt();
     int b = sc.nextInt();
     int minus = a - b;
+
     System.out.println(minus);
   }
 }
